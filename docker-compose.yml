@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  ksc-assement:
+    build: ./
+    container_name: kcbTestApp
+    restart: unless-stopped
+    hostname: kcb-project-app
+    ports:
+      - "8080:8080"
+    networks:
+      - test-network
+networks:
+  test-network:
+    driver: bridge
+
